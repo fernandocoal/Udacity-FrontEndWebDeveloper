@@ -1,7 +1,7 @@
 /* Global Variables */
 
 const apiUrl='http://api.openweathermap.org/data/2.5/weather?zip=';
-const keyApi='&appid=393c85a474d197814013dd9b8b1e0551&units=imperial';
+const keyApi='&appid=***************&units=imperial';
 const port = 8000;
 const portURL = `http://localhost:${port}/projectData`;
 

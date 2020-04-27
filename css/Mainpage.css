@@ -1,0 +1,122 @@
+
+
+.container{
+    display:grid;
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 100px 50px repeat(4,auto);
+    grid-template-areas: 
+    "hd"
+    "Menu"
+    "art"
+    "content"
+    "ft";
+    border: 2px solid white;
+    padding: 1%;
+  }
+.nestedGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  padding:1%;
+  grid-gap: 30px;
+  border-style: groove;
+  grid-template-areas: 
+  "one one"
+  "two two";
+  }
+
+.box{
+  border: 1px solid red;
+  background: white;
+  padding:1%;
+      }
+.header{
+  grid-area:hd;
+  text-align: center;
+  background-image: url(/Project1/Images/maxnewsfrfour417162-4684378.jpg);
+  background-size: contain;
+  font: white;
+    }
+.menu{
+  display: grid;
+  grid-area: Menu;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 50px 50px;
+  grid-gap:50px;
+  padding:1%;
+}
+.articles{
+  grid-area: art;
+}
+.content{
+  grid-area: content;
+    }
+.footer{
+  grid-area: ft;  
+  font-style: italic;
+  text-align: center;
+
+    }
+#mainheader{
+  color: white;
+  font-size: xx-large;
+}
+
+#one{
+  grid-area: one;
+  }
+
+#two{
+  grid-area: two;
+  }
+#Homepage{
+  background-color:tomato;
+  color: white;
+  border-radius: 10%;
+  padding: 5%;
+  text-align: center;
+}
+#Newsroom{
+  background-color:tomato;
+  border-radius: 10%;
+  padding: 5%;
+  color:white;
+  text-align: center;}
+#Aboutme{
+    background-color:tomato;
+    border-radius: 10%;
+    padding: 5%;
+    color:white;
+    text-align: center;
+}
+  /* If Screen Is Wide Enough */
+@media(min-width:900px) {
+  .container{
+    display:grid;
+    text-align: justify;
+    font-family: 'Nunito', sans-serif;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 100px 50px repeat(3,auto);
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd"
+    "Menu Menu Menu Menu Menu Menu Menu Menu"
+    "art art art art art art art art"
+    "content content content content content content content content"
+    "ft ft ft ft ft ft ft ft";
+    border: 2px solid white;
+    padding: 1%;
+  }
+  .nestedGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    padding:1%;
+    grid-gap: 50px;
+    border-style: groove;
+    grid-template-areas: 
+    "one one one two two two";
+    }}

@@ -1,0 +1,168 @@
+@media (max-width: 900px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 1fr auto;
+        grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    }
+
+    #article {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(8, fr);
+        grid-template-rows: repeat(2, 1fr) repeat(2, 1fr);
+        grid-template-areas:
+        "app app app app"
+        "at at at at"
+        "ft ft ft ft"
+        "ft ft ft ft"
+        "tip tip tip tip";
+        justify-content: center;
+        align-content: center;
+    }
+    #content-Logo {
+        grid-area: at;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+
+    #content-Tips {
+        grid-area: tip;
+        display: grid;
+        font-family: 'Poppins', sans-serif;
+    }
+    .tipName{        
+        text-align: justify;
+    }
+    #content-Packages {
+        grid-area: ft;
+        justify-content: space-between;
+        display: grid;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+        "PackageTitle PackageTitle"
+        "PackageCards PackageCards";
+        padding-right: 10px;
+        grid-gap: 10px;
+    }
+    
+   
+    #content-About {
+        grid-area: app;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        padding-right: 10px;
+    }
+    .articleCards {
+        grid: flex;
+        flex-direction: row;
+        justify-content: space-between center;
+        text-align: center;
+        align-items: justify;
+    }
+
+ 
+    #header {
+        grid-area: header;
+        
+    }
+    .navigationbox {
+        font-family: 'Poppins', sans-serif;
+        position: fixed;
+        background-color:rgb(180, 244, 250);
+        justify-content: space-evenly;
+        width: 100%;
+        
+        
+        
+    }
+
+    .foot{
+        grid-area: footer;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        
+        
+    }
+    #footerimage{
+        height: 25%;
+        width:25%;
+    }
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    li {
+        display:inline-block;
+        margin-right: 150px;
+        
+
+    }
+    img {
+
+        border-radius: 5%;
+        height: auto;
+        width: 80%;
+        justify-content: center;
+    }
+
+  
+    a:link{
+        text-decoration: none;
+    }
+  /* visited link */
+    a:visited {
+        text-decoration: none;
+  }
+    a:hover {
+        font-size:150%;
+        color:black;
+  }
+  /* selected link */
+ /* a:active {
+    color: blue;
+    font-size:150%;
+  }*/
+  .active {
+    color: purple;
+    font-size:150%;
+    background-color: lightpink;
+
+    
+  }
+
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}}
